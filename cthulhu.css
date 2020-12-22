@@ -1,0 +1,286 @@
+:root {
+  --color-green: #338855;
+  --color-scale-green: #0c1f13;
+  --color-dark-scale-green: #13231a;
+  --color-dark-green: #162d1f;
+  --color-darkest-green: #153623;
+}
+
+body {
+  background-color: var(--color-green);
+  padding: 0px;
+  margin: 0px;
+}
+
+body * {
+  font-family: 'Reenie Beanie', cursive;
+}
+
+/* sections */
+
+section.cthulhu {
+  padding: 60px;
+  margin: 0;
+  position: relative;
+  /* Scale effect from https://codepen.io/theweej/pen/rNVmRjz */
+  background: radial-gradient(circle at 20% 50%, var(--color-scale-green) 10px, var(--color-dark-scale-green) 11px) 0 18px;
+  background-size: 16px 24px;
+}
+
+section.cthulhu p {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+section.cthulhu:before,
+section.cthulhu:after {
+  --width: 1rem;
+  --color-tentacle: var(--color-dark-green);
+  --duration: 4s;
+  content: " ";
+  position: absolute;
+  top: calc(0% - (var(--width) / 2));
+  left: calc(0% - (var(--width) / 2));
+  width: var(--width);
+  height: var(--width);
+  border-radius: 50%;
+  background-color: var(--color-tentacle);
+  filter: blur(0.5px);
+  animation-name: tentacle;
+  animation-duration: var(--duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  --color-tentacle-1: rgb(22, 45, 31); 
+  --color-tentacle-2: rgb(22, 48, 31);
+  --color-tentacle-3: rgb(22, 51, 31); 
+  --color-tentacle-4: rgb(22, 54, 31); 
+  --color-tentacle-5: rgb(22, 57, 31); 
+  --color-tentacle-6: rgb(22, 60, 31); 
+  --color-tentacle-7: rgb(22, 63, 31); 
+  --color-tentacle-8: rgb(22, 64, 31); 
+  --color-tentacle-9: rgb(22, 67, 31); 
+  --color-tentacle-10: rgb(22, 70, 31); 
+  --color-tentacle-11: rgb(22, 73, 31); 
+  --color-tentacle-12: rgb(22, 76, 31); 
+
+  box-shadow:
+    calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+    calc(var(--width) * 1.8) calc(var(--width) * 1.8) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+    calc(var(--width) * 2.2) calc(var(--width) * 2.2) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+    calc(var(--width) * 2.6) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+    calc(var(--width) * 3.0) calc(var(--width) * 3.0) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+    calc(var(--width) * 3.4) calc(var(--width) * 3.4) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+    calc(var(--width) * 3.8) calc(var(--width) * 3.8) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+    calc(var(--width) * 4.2) calc(var(--width) * 4.2) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+    calc(var(--width) * 4.6) calc(var(--width) * 4.6) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+    calc(var(--width) * 5.0) calc(var(--width) * 5.0) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+    calc(var(--width) * 5.4) calc(var(--width) * 5.4) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+    calc(var(--width) * 5.8) calc(var(--width) * 5.8) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);
+}
+
+section.cthulhu:after {
+  --width: 0.9rem;
+  --color-tentacle: var(--color-darkest-green); 
+  animation-name: tentacle;
+  animation-duration: calc(var(--duration) * 1.4);
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: reverse;
+  --color-tentacle-1: rgb(6, 67, 15); 
+  --color-tentacle-2: rgb(6, 70, 15); 
+  --color-tentacle-3: rgb(6, 73, 15); 
+  --color-tentacle-4: rgb(6, 76, 15); 
+  --color-tentacle-5: rgb(6, 79, 15); 
+  --color-tentacle-6: rgb(6, 82, 15); 
+  --color-tentacle-7: rgb(6, 85, 15); 
+  --color-tentacle-8: rgb(6, 88, 15); 
+  --color-tentacle-9: rgb(6, 91, 15); 
+  --color-tentacle-10: rgb(6, 94, 15); 
+  --color-tentacle-11: rgb(6, 97, 15);
+  --color-tentacle-12: rgb(6, 100, 15); 
+}
+
+@keyframes tentacle {
+  0% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.8) calc(var(--width) * 1.8) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 2.2) calc(var(--width) * 2.2) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 2.6) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 3.0) calc(var(--width) * 3.0) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 3.4) calc(var(--width) * 3.4) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 3.8) calc(var(--width) * 3.8) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 4.2) calc(var(--width) * 4.2) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 4.6) calc(var(--width) * 4.6) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 5.0) calc(var(--width) * 5.0) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 5.4) calc(var(--width) * 5.4) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 5.8) calc(var(--width) * 5.8) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);
+  }
+  5% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.8) calc(var(--width) * 1.8) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 2.2) calc(var(--width) * 2.2) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 2.6) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 3.0) calc(var(--width) * 3.0) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 3.4) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 3.8) calc(var(--width) * 3.4) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 4.2) calc(var(--width) * 3.6) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 4.6) calc(var(--width) * 4.0) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 5.0) calc(var(--width) * 4.4) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 5.4) calc(var(--width) * 4.8) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 5.8) calc(var(--width) * 5.2) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);
+  }
+  15% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.8) calc(var(--width) * 1.8) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 2.2) calc(var(--width) * 2.2) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 2.6) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 3.0) calc(var(--width) * 3.0) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 3.4) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 3.8) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 4.2) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 4.6) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 5.0) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 5.4) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 5.8) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);
+  }
+  25% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.8) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 2.2) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 2.6) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 3.0) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 3.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 3.8) calc(var(--width) * 1.8) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 4.2) calc(var(--width) * 2.2) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 4.6) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 5.0) calc(var(--width) * 3.0) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 5.4) calc(var(--width) * 3.4) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 5.8) calc(var(--width) * 3.8) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);
+  }
+  35% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.8) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 2.2) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 2.6) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 3.0) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 3.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 3.8) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 4.2) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 4.6) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 5.0) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 5.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 5.8) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);
+  }
+  45% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.4) calc(var(--width) * 1.8) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 1.4) calc(var(--width) * 2.2) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 1.4) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 1.6) calc(var(--width) * 3.0) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 2.0) calc(var(--width) * 3.4) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 2.4) calc(var(--width) * 3.8) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 2.8) calc(var(--width) * 4.2) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 3.2) calc(var(--width) * 4.6) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 3.2) calc(var(--width) * 5.0) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 3.2) calc(var(--width) * 5.4) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 3.2) calc(var(--width) * 5.8) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);
+  }
+  55% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.4) calc(var(--width) * 1.8) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 1.4) calc(var(--width) * 2.2) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 1.4) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 1.4) calc(var(--width) * 3.0) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 1.4) calc(var(--width) * 3.4) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 1.4) calc(var(--width) * 3.8) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 1.4) calc(var(--width) * 4.2) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 1.4) calc(var(--width) * 4.6) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 1.8) calc(var(--width) * 5.0) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 2.2) calc(var(--width) * 5.4) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 2.6) calc(var(--width) * 5.8) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);  
+  }
+  65% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.6) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 1.8) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 2.0) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 2.2) calc(var(--width) * 1.4) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 2.4) calc(var(--width) * 1.6) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 2.6) calc(var(--width) * 2.0) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 2.8) calc(var(--width) * 2.4) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 3.0) calc(var(--width) * 2.8) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 3.2) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 3.4) calc(var(--width) * 3.6) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 3.6) calc(var(--width) * 4.0) 0px calc(var(--width) * 0.1) var(--color-tentacle-12); 
+  }
+  75% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.9) calc(var(--width) * 1.9) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 2.4) calc(var(--width) * 2.4) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 2.9) calc(var(--width) * 2.9) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 3.4) calc(var(--width) * 3.4) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 3.9) calc(var(--width) * 3.9) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 4.4) calc(var(--width) * 4.4) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 4.9) calc(var(--width) * 4.9) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 5.4) calc(var(--width) * 5.4) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 5.9) calc(var(--width) * 5.9) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 6.4) calc(var(--width) * 6.4) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 6.9) calc(var(--width) * 6.9) 0px calc(var(--width) * 0.1) var(--color-tentacle-12); 
+  }
+  85% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.9) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 2.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 2.9) calc(var(--width) * 1.5) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 3.4) calc(var(--width) * 1.5) 0px calc(var(--width) * 0.8) var(--color-tentacle-5,
+      calc(var(--width) * 3.9) calc(var(--width) * 1.6) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 4.4) calc(var(--width) * 1.8) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 4.9) calc(var(--width) * 2.0) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 5.4) calc(var(--width) * 2.2) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 5.9) calc(var(--width) * 2.4) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 6.4) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 6.9) calc(var(--width) * 2.8) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);  
+  }
+  95% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.4) calc(var(--width) * 1.8) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 1.4) calc(var(--width) * 2.2) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 1.4) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 1.4) calc(var(--width) * 3.2) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 1.4) calc(var(--width) * 3.6) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 1.4) calc(var(--width) * 4.0) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 1.4) calc(var(--width) * 4.4) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 1.4) calc(var(--width) * 4.8) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 1.4) calc(var(--width) * 5.2) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 1.8) calc(var(--width) * 5.6) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 2.2) calc(var(--width) * 6.0) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);  
+  }
+  100% {
+    box-shadow:
+      calc(var(--width) * 1.4) calc(var(--width) * 1.4) 0px calc(var(--width) * 1.2) var(--color-tentacle-1),
+      calc(var(--width) * 1.8) calc(var(--width) * 1.8) 0px calc(var(--width) * 1.1) var(--color-tentacle-2),
+      calc(var(--width) * 2.2) calc(var(--width) * 2.2) 0px calc(var(--width) * 1.0) var(--color-tentacle-3),
+      calc(var(--width) * 2.6) calc(var(--width) * 2.6) 0px calc(var(--width) * 0.9) var(--color-tentacle-4),
+      calc(var(--width) * 3.0) calc(var(--width) * 3.0) 0px calc(var(--width) * 0.8) var(--color-tentacle-5),
+      calc(var(--width) * 3.4) calc(var(--width) * 3.4) 0px calc(var(--width) * 0.7) var(--color-tentacle-6),
+      calc(var(--width) * 3.8) calc(var(--width) * 3.8) 0px calc(var(--width) * 0.6) var(--color-tentacle-7),
+      calc(var(--width) * 4.2) calc(var(--width) * 4.2) 0px calc(var(--width) * 0.5) var(--color-tentacle-8),
+      calc(var(--width) * 4.6) calc(var(--width) * 4.6) 0px calc(var(--width) * 0.4) var(--color-tentacle-9),
+      calc(var(--width) * 5.0) calc(var(--width) * 5.0) 0px calc(var(--width) * 0.3) var(--color-tentacle-10),
+      calc(var(--width) * 5.4) calc(var(--width) * 5.4) 0px calc(var(--width) * 0.2) var(--color-tentacle-11),
+      calc(var(--width) * 5.8) calc(var(--width) * 5.8) 0px calc(var(--width) * 0.1) var(--color-tentacle-12);
+  }
+}
