@@ -488,6 +488,11 @@ section.cthulhu.manuscript {
   animation-direction: alternate;
 }
 
+section.cthulhu.manuscript:hover,
+section.cthulhu.manuscript:hover > *:first-child:before {
+  animation-play-state: paused;
+}
+
 @keyframes manuscript {
   0% {
     background-color: var(--color-paper);
