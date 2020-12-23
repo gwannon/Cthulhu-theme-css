@@ -5,6 +5,9 @@
   --color-dark-scale-green: #13231a;
   --color-dark-green: #162d1f;
   --color-darkest-green: #153623;
+  --color-energy: #10e7c0;
+  --color-ink: #27282d;
+  --color-paper: #f2eecb;
   --duration: 1s;
 }
 
@@ -474,3 +477,98 @@ section.cthulhu.redeyes.animation:before {
     height: 0px;
   }
 }
+
+section.cthulhu.manuscript {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  animation-name: manuscript;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+}
+
+@keyframes manuscript {
+  0% {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    text-shadow: none;
+  }
+  25% {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    text-shadow: none;
+  }
+  75% {
+    background-color: var(--color-ink);
+    color: var(--color-energy);
+    text-shadow: 0px 0px 5px var(--color-energy);
+  }
+  100% {
+    background-color: var(--color-ink);
+    color: var(--color-energy);
+    text-shadow: 0px 0px 5px var(--color-energy);
+  }
+}
+
+section.cthulhu.manuscript > * {
+  font-family: 'MedievalSharp', cursive;
+  color: inherit;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+section.cthulhu.manuscript > *:first-child {
+  position: relative;
+}
+  
+section.cthulhu.manuscript > *:first-child:first-letter {
+  font-size: 20rem;
+  display: block;
+  float: left;
+  padding: 10rem 2rem 8rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section.cthulhu.manuscript > *:first-child:before {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 2px solid var(--color-ink);
+  animation-name: manuscriptborder;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  width: 17rem;
+  height: 20rem;
+  box-shadow: inset 0px 0px 8px 3px var(--color-ink);
+}
+
+@keyframes manuscriptborder {
+  0% {
+    border: 2px solid var(--color-ink);
+    box-shadow: inset 0px 0px 8px 3px var(--color-ink);
+  }
+  25% {
+    border: 2px solid var(--color-ink);
+    box-shadow: inset 0px 0px 8px 3px var(--color-ink);
+  }
+  75% {
+    border: 2px solid var(--color-energy);
+    box-shadow: inset 0px 0px 8px 3px var(--color-energy);
+  }
+  100% {
+    border: 2px solid var(--color-energy);
+    box-shadow: inset 0px 0px 8px 3px var(--color-energy);
+  }
+}
+
+/*section.cthulhu.manuscript:hover:first-letter {
+  color: var(--color-energy);
+  text-shadow: 0px 0px 5px var(--color-energy);
+  box-shadow: inset 0px 0px 8px 3px var(--color-energy);
+  border: 2px solid var(--color-energy);
+}*/
+
