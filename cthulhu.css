@@ -522,7 +522,6 @@ section.cthulhu.manuscript:hover > *:first-child:after  {
 section.cthulhu.manuscript > * {
   font-family: 'MedievalSharp', cursive;
   color: inherit;
-  max-width: 800px;
   margin: 0 auto 2rem;
 }
 section.cthulhu.manuscript > *:first-child {
