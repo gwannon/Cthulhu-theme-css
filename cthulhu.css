@@ -107,13 +107,13 @@ section.cthulhu h1:after {
   border-bottom-right-radius: calc(var(--drop-width) / 2);
   clip-path: polygon(100% 60%, 100% 100%, 0% 100%, 0% 60%, 50% 0%);
   transform: scale(0);
-  animation-name: bleeding;
+  animation-name: droping;
   animation-duration: var(--duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-@keyframes bleeding {
+@keyframes droping {
   0% {
     top: calc(100% - 1rem);
     transform: scale(0);
