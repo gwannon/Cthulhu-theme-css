@@ -8,6 +8,7 @@
   --color-energy: #10e7c0;
   --color-ink: #27282d;
   --color-paper: #f2eecb;
+  --color-smoke: rgba(115, 130, 118, 0.6);
   --duration: 1s;
 }
 
@@ -84,14 +85,15 @@ body * {
 section.cthulhu h1 {
   --drop-width: 1rem;
   font-family: 'MedievalSharp', cursive;
-  color: var(--color-energy);
+  color: var(--color-neon-green);
   font-size: 2rem;
   letter-spacing: 1px;
   line-height: 2.2rem;
   position: relative;
-  color: var(--color-energy);
+  color: var(--color-neon-green);
   padding: 0;
   margin: calc(var(--drop-width) * 2) 0;
+  text-shadow: 0px 0px 5px var(--color-neon-green);
 }
 
 section.cthulhu h1:after {
@@ -102,7 +104,7 @@ section.cthulhu h1:after {
   position: absolute;
   width: var(--drop-width);
   height: calc(var(--drop-width) * 2);
-  background-color: var(--color-energy);
+  background-color: var(--color-neon-green);
   border-bottom-left-radius: calc(var(--drop-width) / 2);
   border-bottom-right-radius: calc(var(--drop-width) / 2);
   clip-path: polygon(100% 60%, 100% 100%, 0% 100%, 0% 60%, 50% 0%);
@@ -111,6 +113,7 @@ section.cthulhu h1:after {
   animation-duration: var(--duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  box-shadow: 0px 0px 5px var(--color-neon-green);
 }
 
 @keyframes droping {
@@ -152,104 +155,214 @@ section.cthulhu h1 ~ *:nth-child(2) {
     -webkit-text-fill-color: transparent;
   }
   5% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 0%,var(--color-transparent) 5%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 0%,var(--color-transparent) 5%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   10% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 5%,var(--color-transparent) 10%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 5%,var(--color-transparent) 10%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   15% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 10%,var(--color-transparent) 15%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 10%,var(--color-transparent) 15%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   20% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 15%,var(--color-transparent) 20%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 15%,var(--color-transparent) 20%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   25% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 20%,var(--color-transparent) 25%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 20%,var(--color-transparent) 25%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   30% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 25%,var(--color-transparent) 30%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 25%,var(--color-transparent) 30%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   35% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 30%,var(--color-transparent) 35%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 30%,var(--color-transparent) 35%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   40% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 35%,var(--color-transparent) 40%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 35%,var(--color-transparent) 40%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   45% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 40%,var(--color-transparent) 45%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 40%,var(--color-transparent) 45%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   50% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 45%, var(--color-transparent) 50%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 45%, var(--color-transparent) 50%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   55% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 50%, var(--color-transparent) 55%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 50%, var(--color-transparent) 55%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   60% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 55%, var(--color-transparent) 60%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 55%, var(--color-transparent) 60%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   65% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 60%, var(--color-transparent) 65%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 60%, var(--color-transparent) 65%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   70% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 65%, var(--color-transparent) 70%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 65%, var(--color-transparent) 70%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   75% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 70%, var(--color-transparent) 75%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 70%, var(--color-transparent) 75%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   80% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 75%, var(--color-transparent) 80%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 75%, var(--color-transparent) 80%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   85% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 80%, var(--color-transparent) 85%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 80%, var(--color-transparent) 85%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   90% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 85%, var(--color-transparent) 90%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 85%, var(--color-transparent) 90%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   95% {
-    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-energy) 0%, var(--color-energy) 90%, var(--color-transparent) 95%, var(--color-transparent) 100%);
+    background: radial-gradient(var(--drop-form) at 0% calc(var(--drop-width) * 2), var(--color-neon-green) 0%, var(--color-neon-green) 90%, var(--color-transparent) 95%, var(--color-transparent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   100% {
-    background: radial-gradient(var(--drop-form) at 0% 50%, var(--color-energy) 0%, var(--color-energy) 100%);
+    background: radial-gradient(var(--drop-form) at 0% 50%, var(--color-neon-green) 0%, var(--color-neon-green) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+section.cthulhu h2 {
+  --duration: 10s;
+  display: inline-block;
+  font-size: 1.8rem;
+}
+
+section.cthulhu h2:after {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: var(--color-smoke);
+  width: 60%;
+  height: 100%;
+  border-radius: 50%;
+  filter: blur(30px);
+  animation-name: smokeafter;
+  animation-duration: var(--duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes smokeafter {
+  0% {
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    left: 0%;
+    border-radius: 50%;
+  }
+  25% {
+    width: 30%;
+    height: 20%;
+    top: 120%;
+    left: 40%;
+    border-radius: 0%;
+  }
+  50% {
+    width: 50%;
+    height: 130%;
+    top: 30%;
+    left: 60%;
+    border-radius: 50%;
+  }
+  75% {
+    width: 50%;
+    height: 90%;
+    top: -50%;
+    left: 0%;
+    border-radius: 0%;
+  }
+  100% {
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    left: 0%;
+    border-radius: 50%;
+  }
+}
+
+section.cthulhu h2:before {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  background-color: var(--color-smoke);
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  filter: blur(30px);
+  animation-name: smokebefore;
+  animation-duration: var(--duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+
+@keyframes smokebefore {
+  0% {
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    border-radius: 50%;
+  }
+  33% {
+    width: 80%;
+    height: 90%;
+    top: -50%;
+    left: 0%;
+    border-radius: 0%;
+  }
+  66% {
+    width: 30%;
+    height: 130%;
+    top: 120%;
+    left: 40%;
+    border-radius: 30%;
+  }
+  100% {
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    border-radius: 50%;
   }
 }
 
@@ -314,13 +427,15 @@ section.cthulhu > * {
   position: relative;
 }
 
+section.scaled { /* Scale effect from https://codepen.io/theweej/pen/rNVmRjz */
+  background: radial-gradient(circle at 20% 50%, var(--color-scale-green) 10px, var(--color-dark-scale-green) 11px) 0 18px;
+  background-size: 16px 24px;
+}
+
 section.cthulhu.tentacles {
   padding: 0;
   margin: 0;
   position: relative;
-  /* Scale effect from https://codepen.io/theweej/pen/rNVmRjz */
-  background: radial-gradient(circle at 20% 50%, var(--color-scale-green) 10px, var(--color-dark-scale-green) 11px) 0 18px;
-  background-size: 16px 24px;
   overflow: hidden;
 }
 
