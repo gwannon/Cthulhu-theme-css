@@ -260,6 +260,7 @@ section.cthulhu h2 {
   --duration: 10s;
   display: inline-block;
   font-size: 1.8rem;
+  max-width: 550px;
 }
 
 section.cthulhu h2:after {
