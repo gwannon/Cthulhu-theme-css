@@ -3,6 +3,7 @@ This is a theme in CSS3 with resources inspired in the Call of Cthulhu.
 
 # Examples
 * All examples https://theflash.gwannon.com/Cthulhu-theme-css/test.html
+* Titles designs https://codepen.io/gwannon/pen/vYXWZyy
 * Tentacles https://codepen.io/gwannon/pen/YzGrpQP
 * Red eyes https://codepen.io/gwannon/pen/NWRaMXP
 * Energized manuscript https://codepen.io/gwannon/pen/mdrBGoZ
