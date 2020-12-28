@@ -259,8 +259,9 @@ section.cthulhu h1 ~ *:nth-child(2) {
 section.cthulhu h2 {
   --duration: 10s;
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   max-width: 550px;
+  font-weight: 300;
 }
 
 section.cthulhu h2:after {
@@ -335,7 +336,6 @@ section.cthulhu h2:before {
   animation-direction: alternate;
 }
 
-
 @keyframes smokebefore {
   0% {
     width: 50%;
@@ -365,6 +365,34 @@ section.cthulhu h2:before {
     left: 50%;
     border-radius: 50%;
   }
+}
+
+section.cthulhu h3 {
+  font-family: 'MedievalSharp', cursive;
+  color: #38464B;
+  text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+  background-color: #43565d;
+  line-height: 2.2rem;
+  font-size: 2rem;
+  max-width: 200px;
+  font-weight: 300;
+  padding: 80px 10px 20px 10px;
+  text-align: center;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-right: 12px solid #303538;
+}
+
+section.cthulhu h3:after {
+  content: " ";
+  position: absolute;
+  bottom: 0px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 100%;
+  background-color: green;
+  clip-path: polygon(1% 100%, 1% 100%, 0% 87%, 4% 96%, 8% 88%, 10% 93%, 16% 92%, 21% 96%, 24% 87%, 26% 94%, 32% 89%, 36% 97%, 38% 89%, 42% 97%, 46% 89%, 47% 97%, 52% 89%, 53% 97%, 58% 90%, 63% 99%, 66% 91%, 70% 96%, 76% 89%, 76% 97%, 80% 90%, 83% 97%, 88% 90%, 89% 98%, 92% 90%, 96% 96%, 99% 90%, 99% 100%, 100% 100%);
+
 }
 
 section.cthulhu h4 {
