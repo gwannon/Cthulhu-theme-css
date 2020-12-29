@@ -402,19 +402,20 @@ section.cthulhu h4 {
   text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
   background: linear-gradient(to right, rgb(17 139 116) 0%, #00a98b 100%);
   padding: 17px 10px 10px;
-  display: inline-block;
+  display: block;
   border: 20px solid #118b74;
   border-right: 20px solid #09bc9b;
   border-bottom: 20px solid #139f86;
   border-left: 20px solid #0e5145;
   clip-path: polygon(1% 7%, 15% 0%, 20% 4%, 50% 0%, 97% 0%, 100% 11%, 100% 97%, 97% 100%, 50% 95%, 45% 97%, 2% 100%, 0% 94%);
   font-family: 'MedievalSharp', cursive;
-  max-width: 500px;
+  max-width: 350px;
   text-align: center;
   position: relative;
   border-top-left-radius: 31px;
   border-bottom-right-radius: 14px;
   text-transform: uppercase;
+  margin: 0px auto;
 }
 
 section.cthulhu h4:before {
