@@ -397,6 +397,7 @@ section.cthulhu h3 {
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   border-right: 12px solid #303538;
+  margin: 0px auto 20px;
 }
 
 section.cthulhu h3:after {
@@ -974,3 +975,137 @@ section.cthulhu.manuscript > *:first-child:after {
   }
 }
 
+/*  forms */
+
+section.cthulhu form {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  margin: 30px;
+  max-width: 500px;
+  padding: 50px;
+  font-family: 'MedievalSharp', cursive;
+  clip-path: polygon(0% 15px, 7px 7px, 18px 0%, calc(50% - 5px) 0%, 50% calc(0% + 3px), calc(50% - 3px) 40px, 50% 80px, calc(50% + 3px) 30px, calc(50% + 8px) 0%, calc(100% - 17px) 0%, 100% calc(0% + 9px), 100% calc(100% - 20px), calc(100% - 12px) calc(100% - 14px), calc(100% - 17px) 100%, calc(0% + 7px) 100%, 0% calc(100% - 6px));
+}
+
+
+section.cthulhu form input[type=text],
+section.cthulhu form input[type=date],
+section.cthulhu form input[type=phone],
+section.cthulhu form textarea {
+  border: none;
+  width: 100%;
+  padding: 5px;
+  line-height: 100%;
+  font-size: 1.5rem;
+  margin: 0px 0px 10px;
+  outline: none;
+  background-color: var(--color-paper);
+  border-bottom: 1px solid var(--color-ink);
+  font-family: 'MedievalSharp', cursive;
+}
+
+section.cthulhu form select {
+  border: none;
+  appearance: none;
+  width: 100%;
+  padding: 5px;
+  line-height: 100%;
+  font-size: 1.5rem;
+  margin: 0px 0px 10px;
+  outline: none;
+  background-color: var(--color-paper);
+  border-bottom: 1px solid var(--color-ink);
+  font-family: 'MedievalSharp', cursive;
+}
+
+section.cthulhu form select option {
+  font-family: 'MedievalSharp', cursive;
+}
+
+section.cthulhu form label {
+  font-family: 'MedievalSharp', cursive;
+  line-height: 100%;
+  font-size: 1.2rem;
+}
+
+section.cthulhu form input[type=submit],
+section.cthulhu form button {
+  width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    font-family: 'MedievalSharp', cursive;
+    line-height: 100%;
+    font-size: 2rem;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+    border: 35px solid #8c1616;
+    color: #9c1716;
+    background-color: #c12422;
+    box-shadow: inset 0px 0px 8px 3px #210302;
+
+    clip-path: polygon(3% 22%, 6% 23%, 8% 19%, 11% 18%, 14% 21%, 17% 15%, 17% 13%, 22% 11%, 27% 9%, 29% 8%, 32% 4%, 37% 8%, 39% 3%, 42% 3%, 45% 6%, 48% 8%, 53% 4%, 56% 3%, 57% 9%, 60% 9%, 63% 7%, 66% 7%, 67% 8%, 74% 11%, 75% 10%, 77% 12%, 79% 14%, 81% 15%, 82% 16%, 83% 17%, 84% 24%, 86% 24%, 87% 26%, 91% 29%, 91% 29%, 90% 32%, 88% 39%, 91% 39%, 95% 41%, 96% 42%, 95% 47%, 93% 48%, 90% 54%, 92% 55%, 95% 57%, 96% 59%, 94% 64%, 94% 64%, 91% 69%, 89% 69%, 93% 75%, 91% 77%, 90% 78%, 89% 83%, 89% 86%, 87% 84%, 86% 86%, 86% 91%, 87% 96%, 83% 95%, 81% 95%, 78% 98%, 72% 95%, 69% 99%, 66% 99%, 63% 98%, 61% 99%, 53% 100%, 52% 99%, 49% 97%, 46% 98%, 44% 100%, 38% 99%, 36% 97%, 34% 95%, 32% 93%, 30% 90%, 22% 88%, 21% 88%, 24% 86%, 23% 81%, 20% 75%, 18% 75%, 16% 75%, 14% 75%, 12% 74%, 14% 70%, 11% 68%, 9% 67%, 8% 66%, 5% 63%, 1% 58%, 6% 49%, 6% 43%, 3% 43%, 2% 41%, 3% 34%, 3% 31%, 3% 28%, 2% 24%, 1% 20%);
+}
+
+
+
+section.cthulhu form input[type="radio"] {
+  border-radius: 15%;
+  z-index: 100;
+  height: 20px;
+  width: 20px;
+  appearance: none;
+  outline: none;
+  background-color: #000;
+  cursor: pointer;
+  position: relative;
+  margin: 0px;
+  display: inline-block;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+section.cthulhu form input[type="radio"]:after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-paper);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: background 0.3s, left 0.3s;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+}
+
+section.cthulhu form input[type="radio"]:checked:after {
+  background-color: red;
+}
+
+section.cthulhu form input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  appearance: none;
+  outline: none;
+  background-color: var(--color-paper);
+  cursor: pointer;
+  position: relative;
+  margin: 0px;
+  border-radius: 50%;
+  border: 1px solid var(--color-ink);
+  display: inline-block;
+}
+
+section.cthulhu form input[type="checkbox"]:checked {
+  background-color: var(--color-dark-scale-green);
+  border: 1px solid red;
+}
+
+section.cthulhu form input[type="checkbox"]:checked:before {
+  width: 1rem;
+  height: 1rem;
+  content: " ";
+  position: absolute;
+  border-radius: 50%;
+  top: -1px;
+  left: -1px;
+  background: radial-gradient(circle, var(--color-dark-scale-green) 0%, var(--color-dark-scale-green) 40%, rgba(255,162,0,1) 42%, rgba(237,76,13,1) 72%,   rgba(255,0,0,1) 100%);
+}
